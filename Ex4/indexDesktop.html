@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Developer Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./stylesDesktop.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-3">
+      <header class="d-flex justify-content-between align-items-center">
+        <div>
+          <h1 class="font-weight-bold">Ngo Le Thien An</h1>
+          <h2 class="text-muted">Frontend Developer</h2>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#articles">Articles</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <button id="theme-toggle" class="btn btn-sm btn-outline-dark">
+            Toggle Dark Mode
+          </button>
+        </nav>
+      </header>
+
+      <main class="row mt-4">
+        <!-- Left Column: Projects, Work Experience -->
+        <section class="col-md-6 mb-4">
+          <h3 class="font-weight-bold">Projects</h3>
+          <ul class="list-group">
+            <li class="list-group-item">HTML Only Portfolio</li>
+            <li class="list-group-item">Calculator</li>
+            <li class="list-group-item">Quiz App</li>
+            <li class="list-group-item">Countdown Timer</li>
+            <li class="list-group-item">Product Upcoming Page</li>
+          </ul>
+
+          <h3 class="mt-4 font-weight-bold">Work Experience</h3>
+          <p><strong>roadmap.sh</strong></p>
+          <p>Solved all the frontend projects</p>
+          <a href="https://github.com/AnBin4523" class="btn btn-primary btn-sm"
+            >Visit my Profile</a
+          >
+
+          <h4 class="mt-4">OpenSource Work</h4>
+          <p>
+            Contributed to 50 opensource projects. Made my own projects with 200
+            Github Stars
+          </p>
+          <a href="https://github.com/AnBin4523" class="btn btn-primary btn-sm"
+            >Visit my GitHub Profile</a
+          >
+        </section>
+
+        <!-- Right Column: Education, Reviews -->
+        <section class="col-md-6 mb-4">
+          <h3 class="font-weight-bold">Education</h3>
+          <p>
+            Graduated with 3.76 out of 4 CGPA, Won Acme Hackathon, Organized 30
+            sessions
+          </p>
+          <h4>Courses I took:</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Object Oriented Programming</li>
+            <li class="list-group-item">Data Structures and Algorithms</li>
+            <li class="list-group-item">Web Engineering</li>
+            <li class="list-group-item">Artificial Intelligence</li>
+            <li class="list-group-item">Human Computer Interaction</li>
+            <li class="list-group-item">Database Management Systems</li>
+            <li class="list-group-item">Operating Systems</li>
+            <li class="list-group-item">Discrete Mathematics</li>
+          </ul>
+
+          <h3 class="mt-4 font-weight-bold">Reviews from my Teachers</h3>
+          <div class="card-deck">
+            <div class="card">
+              <blockquote class="card-body">
+                "John doe was a brilliant student, always stood out with his
+                assignments."
+                <footer class="blockquote-footer">
+                  John Doe, Assistant Professor
+                </footer>
+              </blockquote>
+            </div>
+            <div class="card">
+              <blockquote class="card-body">
+                "John doe was a brilliant student, always stood out with his
+                assignments."
+                <footer class="blockquote-footer">
+                  John Doe, Assistant Professor
+                </footer>
+              </blockquote>
+            </div>
+            <div class="card">
+              <blockquote class="card-body">
+                "John doe was a brilliant student, always stood out with his
+                assignments."
+                <footer class="blockquote-footer">
+                  John Doe, Assistant Professor
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="text-center mt-4">
+        <p>&copy; all rights reserved 2025</p>
+      </footer>
+    </div>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
+  </body>
+</html>

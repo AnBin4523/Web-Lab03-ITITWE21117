@@ -1,0 +1,215 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #666;
+  --background-color: #f4f4f4;
+  --border-color: #ddd;
+  --outline-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border: 2px solid var(--outline-color);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-box {
+  border-bottom: 1px solid var(--outline-color);
+  padding: 10px;
+  text-align: center;
+}
+
+.name-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+nav {
+  font-size: 0.8em;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.main-content {
+  display: flex;
+  border-bottom: 1px solid var(--outline-color);
+}
+
+.main-content section {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid var(--outline-color);
+}
+
+.main-content section:last-child {
+  border-right: none;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+#reviews {
+  padding: 20px;
+}
+
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+blockquote {
+  flex-basis: calc(33.333% - 20px);
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+blockquote footer {
+  margin-top: 10px;
+  text-align: right;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: var(--secondary-color);
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content section {
+    border-right: none;
+    border-bottom: 1px solid var(--outline-color);
+  }
+
+  .main-content section:last-child {
+    border-bottom: none;
+  }
+
+  .review-container {
+    flex-direction: column;
+  }
+
+  blockquote {
+    flex-basis: 100%;
+  }
+}
+
+/* Light Mode */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.nav-link {
+  color: #007bff;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .nav-link {
+  color: #f8f9fa;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #ffc107;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.card-deck .card {
+  background-color: #fff;
+}
+
+body.dark-mode .card {
+  background-color: #495057;
+}

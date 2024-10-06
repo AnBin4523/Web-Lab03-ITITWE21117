@@ -1,0 +1,109 @@
+/* Google Fonts */
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Box Model */
+.box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+/* Header Section */
+#introduction .profile {
+  text-align: center;
+}
+
+#introduction h1 {
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Projects Section */
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#projects ul li {
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Education Section */
+#education ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+#education ul li {
+  margin-bottom: 8px;
+}
+
+/* Reviews Section */
+#reviews blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  #projects ul li,
+  #education ul li {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}

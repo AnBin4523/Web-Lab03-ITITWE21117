@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      #result {
+        display: none; /* hidden */
+      }
+
+      legend {
+        color: teal;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Logo title -->
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <img
+          src="./images/logo vector IU.png"
+          alt="IU Logo"
+          class="img-fluid"
+          style="max-width: 150px"
+        />
+        <h1 class="my-3" style="color: teal">Survey</h1>
+        <p>
+          If you have a moment, we'd appreciate it if you would fill out this
+          survey.
+        </p>
+      </div>
+
+      <!-- Form Starts Here -->
+      <form id="surveyForm" onsubmit="handleSubmit(event)">
+        <fieldset>
+          <legend>Your information:</legend>
+
+          <!-- First Name -->
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              name="firstName"
+              placeholder="Enter first name"
+              required
+            />
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              name="lastName"
+              placeholder="Enter last name"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+
+          <!-- Date of Birth -->
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dob"
+              name="dob"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <!-- How did you hear about us? -->
+        <fieldset class="mt-4">
+          <legend>How did you hear about us?</legend>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="referral"
+              id="searchEngine"
+              value="Search engine"
+              checked
+            />
+            <label class="form-check-label" for="searchEngine"
+              >Search engine</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="referral"
+              id="wordOfMouth"
+              value="Word of mouth"
+            />
+            <label class="form-check-label" for="wordOfMouth"
+              >Word of mouth</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="referral"
+              id="socialMedia"
+              value="Social Media"
+            />
+            <label class="form-check-label" for="socialMedia"
+              >Social Media</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="referral"
+              id="other"
+              value="Other"
+            />
+            <label class="form-check-label" for="other">Other</label>
+          </div>
+        </fieldset>
+
+        <!-- Would you like to receive announcements -->
+        <fieldset class="mt-4">
+          <legend>
+            Would you like to receive announcements about new CDs and special
+            offers?
+          </legend>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="offers"
+              name="offers"
+              value="YES"
+            />
+            <label class="form-check-label" for="offers"
+              >YES, I'd like that.</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="emailAnnouncements"
+              name="emailAnnouncements"
+              value="YES"
+            />
+            <label class="form-check-label" for="emailAnnouncements"
+              >YES, please send me email announcements.</label
+            >
+          </div>
+        </fieldset>
+
+        <!-- Contact method -->
+        <div class="form-group mt-4">
+          <label for="contactMethod">Please contact me by:</label>
+          <select class="form-control" id="contactMethod" name="contactMethod">
+            <option>Email or postal mail</option>
+            <option>Email only</option>
+            <option>Postal mail only</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!-- Result Display -->
+      <div id="result" class="mt-5">
+        <h3>Thank you for submitting your survey!</h3>
+        <p><strong>First Name:</strong> <span id="resultFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="resultLastName"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="resultDob"></span></p>
+        <p>
+          <strong>How did you hear about us?</strong>
+          <span id="resultReferral"></span>
+        </p>
+        <p><strong>Receive offers:</strong> <span id="resultOffers"></span></p>
+        <p>
+          <strong>Contact Method:</strong>
+          <span id="resultContactMethod"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="formHandler.js"></script>
+  </body>
+</html>
